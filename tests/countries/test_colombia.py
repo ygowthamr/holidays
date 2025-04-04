@@ -4,7 +4,7 @@
 #  specific sets of holidays on the fly. It aims to make determining whether a
 #  specific date is a holiday as fast and flexible as possible.
 #
-#  Authors: Vacanza Team and individual contributors (see AUTHORS file)
+#  Authors: Vacanza Team and individual contributors (see AUTHORS.md file)
 #           dr-prodigy <dr.prodigy.github@gmail.com> (c) 2017-2023
 #           ryanss <ryanssdev@icloud.com> (c) 2014-2017
 #  Website: https://github.com/vacanza/holidays
@@ -315,7 +315,7 @@ class TestColombia(CommonCountryTests, TestCase):
             ("2022-05-30", "Ascension Day (observed)"),
             ("2022-06-20", "Corpus Christi (observed)"),
             ("2022-06-27", "Sacred Heart (observed)"),
-            ("2022-07-04", "Saint Peter and Saint Paul (observed)"),
+            ("2022-07-04", "Saint Peter and Saint Paul's Day (observed)"),
             ("2022-07-20", "Independence Day"),
             ("2022-08-07", "Battle of Boyacá"),
             ("2022-08-15", "Assumption Day"),

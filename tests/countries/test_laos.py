@@ -4,7 +4,7 @@
 #  specific sets of holidays on the fly. It aims to make determining whether a
 #  specific date is a holiday as fast and flexible as possible.
 #
-#  Authors: Vacanza Team and individual contributors (see AUTHORS file)
+#  Authors: Vacanza Team and individual contributors (see AUTHORS.md file)
 #           dr-prodigy <dr.prodigy.github@gmail.com> (c) 2017-2023
 #           ryanss <ryanssdev@icloud.com> (c) 2014-2017
 #  Website: https://github.com/vacanza/holidays
@@ -417,7 +417,7 @@ class TestLaos(CommonCountryTests, TestCase):
             ("2022-05-01", "International Labor Day"),
             ("2022-05-02", "International Labor Day (in lieu)"),
             ("2022-05-15", "Visakha Bousa Festival"),
-            ("2022-06-01", "International Children Day; National Arbor Day"),
+            ("2022-06-01", "International Children's Day; National Arbor Day"),
             (
                 "2022-07-13",
                 (

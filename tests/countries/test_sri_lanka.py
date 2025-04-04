@@ -4,7 +4,7 @@
 #  specific sets of holidays on the fly. It aims to make determining whether a
 #  specific date is a holiday as fast and flexible as possible.
 #
-#  Authors: Vacanza Team and individual contributors (see AUTHORS file)
+#  Authors: Vacanza Team and individual contributors (see AUTHORS.md file)
 #           dr-prodigy <dr.prodigy.github@gmail.com> (c) 2017-2023
 #           ryanss <ryanssdev@icloud.com> (c) 2014-2017
 #  Website: https://github.com/vacanza/holidays
@@ -304,7 +304,7 @@ class TestSriLanka(CommonCountryTests, TestCase):
             ("2022-07-29", "Public Sector Holiday"),
             ("2022-08-11", "Nikini Full Moon Poya Day"),
             ("2022-09-10", "Binara Full Moon Poya Day"),
-            ("2022-10-09", "The Prophet's Birthday; Vap Full Moon Poya Day"),
+            ("2022-10-09", "Prophet's Birthday; Vap Full Moon Poya Day"),
             ("2022-10-10", "Special Bank Holiday"),
             ("2022-10-24", "Deepavali Festival Day"),
             ("2022-11-07", "Il Full Moon Poya Day"),

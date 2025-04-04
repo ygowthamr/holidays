@@ -4,7 +4,7 @@
 #  specific sets of holidays on the fly. It aims to make determining whether a
 #  specific date is a holiday as fast and flexible as possible.
 #
-#  Authors: Vacanza Team and individual contributors (see AUTHORS file)
+#  Authors: Vacanza Team and individual contributors (see AUTHORS.md file)
 #           dr-prodigy <dr.prodigy.github@gmail.com> (c) 2017-2023
 #           ryanss <ryanssdev@icloud.com> (c) 2014-2017
 #  Website: https://github.com/vacanza/holidays
@@ -108,14 +108,14 @@ class TestHaiti(CommonCountryTests, TestCase):
             ("2024-02-14", "Ash Wednesday"),
             ("2024-03-28", "Maundy Thursday"),
             ("2024-03-29", "Good Friday"),
-            ("2024-03-31", "Easter"),
+            ("2024-03-31", "Easter Sunday"),
             ("2024-05-01", "Agriculture and Labor Day"),
-            ("2024-05-09", "Ascension"),
+            ("2024-05-09", "Ascension Day"),
             ("2024-05-18", "Flag Day and University Day"),
             ("2024-05-23", "National Sovereignty Day"),
             ("2024-05-30", "Corpus Christi"),
             ("2024-06-27", "Feast of Lady of Perpetual Help, Patroness of Haiti"),
-            ("2024-08-15", "Assumption of Mary"),
+            ("2024-08-15", "Assumption Day"),
             ("2024-09-20", "Birth Anniversary of Jean-Jacques Dessalines"),
             ("2024-10-17", "Death of Dessalines"),
             ("2024-11-01", "All Saints' Day"),

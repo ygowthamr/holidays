@@ -4,7 +4,7 @@
 #  specific sets of holidays on the fly. It aims to make determining whether a
 #  specific date is a holiday as fast and flexible as possible.
 #
-#  Authors: Vacanza Team and individual contributors (see AUTHORS file)
+#  Authors: Vacanza Team and individual contributors (see AUTHORS.md file)
 #           dr-prodigy <dr.prodigy.github@gmail.com> (c) 2017-2023
 #           ryanss <ryanssdev@icloud.com> (c) 2014-2017
 #  Website: https://github.com/vacanza/holidays
@@ -362,10 +362,10 @@ class TestKazakhstan(CommonCountryTests, WorkingDayTests, TestCase):
             ("2024-01-02", "New Year's Day"),
             ("2024-01-07", "Orthodox Christmas"),
             ("2024-03-08", "International Women's Day"),
-            ("2024-03-21", "Nowruz holiday"),
-            ("2024-03-22", "Nowruz holiday"),
-            ("2024-03-23", "Nowruz holiday"),
-            ("2024-03-25", "Nowruz holiday (observed)"),
+            ("2024-03-21", "Nowruz Holiday"),
+            ("2024-03-22", "Nowruz Holiday"),
+            ("2024-03-23", "Nowruz Holiday"),
+            ("2024-03-25", "Nowruz Holiday (observed)"),
             ("2024-05-01", "Kazakhstan's People Solidarity Holiday"),
             ("2024-05-07", "Defender of the Fatherland Day"),
             ("2024-05-08", "Day off (substituted from 05/04/2024)"),

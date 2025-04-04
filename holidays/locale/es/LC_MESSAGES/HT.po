@@ -4,7 +4,7 @@
 #  specific sets of holidays on the fly. It aims to make determining whether a
 #  specific date is a holiday as fast and flexible as possible.
 #
-#  Authors: Vacanza Team and individual contributors (see AUTHORS file)
+#  Authors: Vacanza Team and individual contributors (see AUTHORS.md file)
 #           dr-prodigy <dr.prodigy.github@gmail.com> (c) 2017-2023
 #           ryanss <ryanssdev@icloud.com> (c) 2014-2017
 #  Website: https://github.com/vacanza/holidays
@@ -70,7 +70,7 @@ msgstr "Martes Gordo"
 msgid "Vendredi Saint"
 msgstr "Viernes Santo"
 
-#. Easter.
+#. Easter Sunday.
 msgid "Pâques"
 msgstr "Pascua"
 
@@ -78,7 +78,7 @@ msgstr "Pascua"
 msgid "Fête-Dieu"
 msgstr "Fête-Dieu"
 
-#. Assumption of Mary.
+#. Assumption Day.
 msgid "Assomption de Marie"
 msgstr "Asunción de María"
 
@@ -114,7 +114,7 @@ msgstr "Día de la Soberanía Nacional"
 msgid "Fête de Notre-Dame du Perpétuel Secours, patronne d'Haiti"
 msgstr "Fiesta de Nuestra Señora del Perpetuo Socorro, patrona de Haití"
 
-#. Ascension.
+#. Ascension Day.
 msgid "Ascension"
 msgstr "Ascensión"
 

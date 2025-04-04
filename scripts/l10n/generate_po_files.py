@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 
+
 #  holidays
 #  --------
 #  A fast, efficient Python library for generating country, province and state
 #  specific sets of holidays on the fly. It aims to make determining whether a
 #  specific date is a holiday as fast and flexible as possible.
 #
-#  Authors: Vacanza Team and individual contributors (see AUTHORS file)
+#  Authors: Vacanza Team and individual contributors (see AUTHORS.md file)
 #           dr-prodigy <dr.prodigy.github@gmail.com> (c) 2017-2023
 #           ryanss <ryanssdev@icloud.com> (c) 2014-2017
 #  Website: https://github.com/vacanza/holidays
@@ -20,6 +21,8 @@ from pathlib import Path
 from lingva.extract import main as create_pot_file
 from polib import pofile
 
+WRAP_WIDTH = 99
+
 
 class POGenerator:
     """Generates .po files for supported country/market entities."""
@@ -27,7 +30,7 @@ class POGenerator:
     @staticmethod
     def update_po_file(po_path: str, pot_path: str, package_version: str) -> None:
         """Merge .po file with .pot"""
-        po_file = pofile(po_path)
+        po_file = pofile(po_path, wrapwidth=WRAP_WIDTH)
         po_file_initial = po_file.copy()
         pot_file = pofile(pot_path)
 
@@ -81,7 +84,7 @@ class POGenerator:
                     "--package-version",
                     package_version,
                     "--width",
-                    "100",
+                    f"{WRAP_WIDTH}",
                     "--no-location",
                 ),
                 standalone_mode=False,
@@ -91,8 +94,10 @@ class POGenerator:
             pot_file = pofile(pot_file_path)
             pot_file.metadata.update(
                 {
+                    "Language": default_language,
                     "Language-Team": "Holidays Localization Team",
                     "PO-Revision-Date": pot_file.metadata["POT-Creation-Date"],
+                    "X-Source-Language": default_language,
                 }
             )
             pot_file.save()
@@ -102,9 +107,7 @@ class POGenerator:
             po_directory.mkdir(parents=True, exist_ok=True)
             po_file_path = po_directory / f"{entity_code}.po"
             if not po_file_path.exists():
-                po_file = pofile(pot_file_path)
-                po_file.metadata["Language"] = default_language
-                po_file.save(po_file_path)
+                pofile(pot_file_path).save(po_file_path)
 
             # Update all .po files.
             for po_file_path in locale_path.rglob(f"{entity_code}.po"):

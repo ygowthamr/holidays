@@ -4,7 +4,7 @@
 #  specific sets of holidays on the fly. It aims to make determining whether a
 #  specific date is a holiday as fast and flexible as possible.
 #
-#  Authors: Vacanza Team and individual contributors (see AUTHORS file)
+#  Authors: Vacanza Team and individual contributors (see AUTHORS.md file)
 #           dr-prodigy <dr.prodigy.github@gmail.com> (c) 2017-2023
 #           ryanss <ryanssdev@icloud.com> (c) 2014-2017
 #  Website: https://github.com/vacanza/holidays
@@ -52,7 +52,7 @@ class TestHongKong(CommonCountryTests, TestCase):
             "2015-09-03",
         )
 
-    def test_first_day_of_january(self):
+    def test_new_years_day(self):
         name = "一月一日"
         name_observed = f"{name}（慶祝）"
         name_following = f"{name}翌日"
@@ -98,7 +98,7 @@ class TestHongKong(CommonCountryTests, TestCase):
             name_following, self.opt_holidays, (f"{year}-01-02" for year in exception_years)
         )
 
-    def test_lunar_new_year(self):
+    def test_chinese_new_year(self):
         name_eve = "農曆年初一的前一日"
         name = "農曆年初一"
         name_second = "農曆年初二"
@@ -371,7 +371,7 @@ class TestHongKong(CommonCountryTests, TestCase):
             "2026-04-07",
         )
 
-    def test_ching_ming_festival(self):
+    def test_tomb_sweeping_day(self):
         name = "清明節"
         name_observed = f"{name}（慶祝）"
         name_following = f"{name}翌日"
@@ -466,7 +466,7 @@ class TestHongKong(CommonCountryTests, TestCase):
         )
         self.assertNoHolidayName(name, self.opt_holidays, exception_years, range(1946, 1968))
 
-    def test_birthday_of_buddha(self):
+    def test_the_buddhas_birthday(self):
         name = "佛誕"
         name_observed = f"{name}（慶祝）"
         name_following = f"{name}翌日"
@@ -476,7 +476,7 @@ class TestHongKong(CommonCountryTests, TestCase):
             "2022-05-08",
             "2023-05-26",
             "2024-05-15",
-            "2025-05-04",
+            "2025-05-05",
             "2026-05-24",
             "2027-05-13",
             "2028-05-02",
@@ -488,10 +488,7 @@ class TestHongKong(CommonCountryTests, TestCase):
             "2034-05-25",
             "2035-05-15",
         )
-        obs_dt = (
-            "2022-05-09",
-            "2025-05-05",
-        )
+        obs_dt = ("2022-05-09",)
         self.assertHolidayName(name, range(2022, 2050))
         self.assertHolidayName(name_observed, obs_dt)
         self.assertNoHolidayName(name, range(1963, 2022))
@@ -520,7 +517,7 @@ class TestHongKong(CommonCountryTests, TestCase):
             "2023-05-26",
             "2024-05-15",
         )
-        exception_years = {2002, 2005, 2019, 2022, 2025, 2026, 2029, 2032, 2046, 2049}
+        exception_years = {2002, 2005, 2019, 2022, 2026, 2029, 2032, 2046, 2049}
         self.assertHolidayName(
             name_following,
             self.opt_holidays,
@@ -528,7 +525,6 @@ class TestHongKong(CommonCountryTests, TestCase):
             "2005-05-16",
             "2019-05-13",
             "2022-05-09",
-            "2025-05-05",
         )
         self.assertHolidayName(
             name, self.opt_holidays, set(range(1999, 2050)).difference(exception_years)
@@ -562,7 +558,7 @@ class TestHongKong(CommonCountryTests, TestCase):
         )
         self.assertNoHolidayName(name, self.opt_holidays, range(1946, 1999))
 
-    def test_tuen_ng_festival(self):
+    def test_dragon_boat_festival(self):
         name = "端午節"
         name_observed = f"{name}（慶祝）"
         name_following = f"{name}翌日"
@@ -634,7 +630,7 @@ class TestHongKong(CommonCountryTests, TestCase):
         )
         self.assertNoHolidayName(name, self.opt_holidays, exception_years, range(1946, 1968))
 
-    def test_hksar_day(self):
+    def test_hong_kong_sar_day(self):
         name = "香港特別行政區成立紀念日"
         name_observed = f"{name}（慶祝）"
         name_following = f"{name}翌日"
@@ -738,7 +734,7 @@ class TestHongKong(CommonCountryTests, TestCase):
             name_second, self.opt_holidays, set(range(1946, 2050)).difference(present_years)
         )
 
-    def test_chung_yeung_festival(self):
+    def test_double_ninth_festival(self):
         name = "重陽節"
         name_observed = f"{name}（慶祝）"
         name_following = f"{name}翌日"
@@ -1268,8 +1264,7 @@ class TestHongKong(CommonCountryTests, TestCase):
             ("2025-01-31", "農曆年初三"),
             ("2025-04-04", "清明節"),
             ("2025-05-01", "勞動節"),
-            ("2025-05-04", "佛誕"),
-            ("2025-05-05", "佛誕（慶祝）"),
+            ("2025-05-05", "佛誕"),
             ("2025-05-31", "端午節"),
             ("2025-07-01", "香港特別行政區成立紀念日"),
             ("2025-10-01", "國慶日"),
@@ -1409,7 +1404,7 @@ class TestHongKong(CommonCountryTests, TestCase):
             ("2025-04-19", "耶穌受難節翌日"),
             ("2025-04-21", "復活節星期一"),
             ("2025-05-01", "勞動節"),
-            ("2025-05-05", "佛誕翌日"),
+            ("2025-05-05", "佛誕"),
             ("2025-05-31", "端午節"),
             ("2025-07-01", "香港特別行政區成立紀念日"),
             ("2025-10-01", "國慶日"),
@@ -1465,21 +1460,21 @@ class TestHongKong(CommonCountryTests, TestCase):
     def test_l10n_en_us(self):
         self.assertLocalizedHolidays(
             "en_US",
-            ("2024-01-01", "The first day of January"),
-            ("2024-02-10", "Lunar New Year's Day"),
-            ("2024-02-12", "The third day of Lunar New Year"),
-            ("2024-02-13", "The fourth day of Lunar New Year"),
+            ("2024-01-01", "New Year's Day"),
+            ("2024-02-10", "Chinese New Year"),
+            ("2024-02-12", "The third day of Chinese New Year"),
+            ("2024-02-13", "The fourth day of Chinese New Year"),
             ("2024-03-29", "Good Friday"),
             ("2024-03-30", "The day following Good Friday"),
             ("2024-04-01", "Easter Monday"),
-            ("2024-04-04", "Ching Ming Festival"),
+            ("2024-04-04", "Tomb-Sweeping Day"),
             ("2024-05-01", "Labor Day"),
-            ("2024-05-15", "The Birthday of the Buddha"),
-            ("2024-06-10", "Tuen Ng Festival"),
-            ("2024-07-01", "Hong Kong Special Administrative Region Establishment Day"),
-            ("2024-09-18", "The day following the Chinese Mid-Autumn Festival"),
+            ("2024-05-15", "The Buddha's Birthday"),
+            ("2024-06-10", "Dragon Boat Festival"),
+            ("2024-07-01", "Hong Kong S.A.R. Establishment Day"),
+            ("2024-09-18", "The Day following Mid-Autumn Festival"),
             ("2024-10-01", "National Day"),
-            ("2024-10-11", "Chung Yeung Festival"),
+            ("2024-10-11", "Double Ninth Festival"),
             ("2024-12-25", "Christmas Day"),
             ("2024-12-26", "The first weekday after Christmas Day"),
         )

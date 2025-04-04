@@ -4,7 +4,7 @@
 #  specific sets of holidays on the fly. It aims to make determining whether a
 #  specific date is a holiday as fast and flexible as possible.
 #
-#  Authors: Vacanza Team and individual contributors (see AUTHORS file)
+#  Authors: Vacanza Team and individual contributors (see AUTHORS.md file)
 #           dr-prodigy <dr.prodigy.github@gmail.com> (c) 2017-2023
 #           ryanss <ryanssdev@icloud.com> (c) 2014-2017
 #  Website: https://github.com/vacanza/holidays
@@ -25,11 +25,12 @@ from holidays.observed_holiday_base import (
 
 
 class Azerbaijan(ObservedHolidayBase, InternationalHolidays, IslamicHolidays, StaticHolidays):
-    """
+    """Azerbaijan holidays.
+
     References:
-        - https://en.wikipedia.org/wiki/Public_holidays_in_Azerbaijan
-        - https://az.wikipedia.org/wiki/Az%C9%99rbaycan%C4%B1n_d%C3%B6vl%C9%99t_bayramlar%C4%B1_v%C9%99_x%C3%BCsusi_g%C3%BCnl%C9%99ri
-        - https://www.sosial.gov.az/en/prod-calendar
+        * <https://en.wikipedia.org/wiki/Public_holidays_in_Azerbaijan>
+        * <https://az.wikipedia.org/wiki/Az%C9%99rbaycan%C4%B1n_d%C3%B6vl%C9%99t_bayramlar%C4%B1_v%C9%99_x%C3%BCsusi_g%C3%BCnl%C9%99ri>
+        * <https://www.sosial.gov.az/en/prod-calendar>
     """
 
     country = "AZ"
@@ -44,9 +45,17 @@ class Azerbaijan(ObservedHolidayBase, InternationalHolidays, IslamicHolidays, St
     supported_languages = ("az", "en_US", "uk")
     start_year = 1990
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, islamic_show_estimated: bool = True, *args, **kwargs):
+        """
+        Args:
+            islamic_show_estimated:
+                Whether to add "estimated" label to Islamic holidays name
+                if holiday date is estimated.
+        """
         InternationalHolidays.__init__(self)
-        IslamicHolidays.__init__(self, AzerbaijanIslamicHolidays)
+        IslamicHolidays.__init__(
+            self, cls=AzerbaijanIslamicHolidays, show_estimated=islamic_show_estimated
+        )
         StaticHolidays.__init__(self, AzerbaijanStaticHolidays)
         kwargs.setdefault("observed_rule", SAT_SUN_TO_NEXT_WORKDAY)
         kwargs.setdefault("observed_since", 2006)
@@ -68,7 +77,9 @@ class Azerbaijan(ObservedHolidayBase, InternationalHolidays, IslamicHolidays, St
             dts_non_observed.add(self._add_holiday_jan_20(tr("Ümumxalq hüzn günü")))
 
         # Women's Day.
-        dts_observed.add(self._add_womens_day(tr("Qadınlar günü")))
+        dt = self._add_womens_day(tr("Qadınlar günü"))
+        if self._year != 2025:
+            dts_observed.add(dt)
 
         # Spring Festival.
         name = tr("Novruz bayramı")
@@ -135,7 +146,9 @@ class Azerbaijan(ObservedHolidayBase, InternationalHolidays, IslamicHolidays, St
         if self._year >= 1993:
             # Eid al-Fitr.
             name = tr("Ramazan bayrami")
-            dts_bairami.update(self._add_eid_al_fitr_day(name))
+            dt = self._add_eid_al_fitr_day(name)
+            if self._year != 2025:
+                dts_bairami.update(dt)
             if self._year >= 2006:
                 dts_bairami.update(self._add_eid_al_fitr_day_two(name))
 
@@ -217,6 +230,7 @@ class AzerbaijanIslamicHolidays(_CustomIslamicHolidays):
         2022: (JUL, 9),
         2023: (JUN, 28),
         2024: (JUN, 16),
+        2025: (JUN, 6),
     }
 
     EID_AL_FITR_DATES = {
@@ -243,26 +257,35 @@ class AzerbaijanIslamicHolidays(_CustomIslamicHolidays):
         2022: (MAY, 2),
         2023: (APR, 21),
         2024: (APR, 10),
+        2025: (MAR, 30),
     }
 
 
 class AzerbaijanStaticHolidays:
-    """
+    """Azerbaijan special holidays.
+
     Substituted holidays references:
-        - https://nk.gov.az/az/senedler/qerarlar/is-va-istirahat-gunlarinin-yerlarinin-dayisdirilmasi-haqqinda-5423
-        - https://nk.gov.az/az/senedler/qerarlar/is-va-istirahat-gunlarinin-yerlarinin--dayisdirilmasi-haqqinda-5982
-        - https://nk.gov.az/az/senedler/qerarlar/is-va-istirahat-gunlarinin-yerlarinin-dayisdirilmasi-haqqinda-6488
-        - https://nk.gov.az/az/senedler/qerarlar/is-ve-istirahet-gunlerinin-yerlerinin-deyisdirilme-7047
-        - https://nk.gov.az/az/senedler/qerarlar/is-ve-istirahet-gunlerinin-yerlerinin-deyisdirilme-7466
-        - https://nk.gov.az/az/senedler/qerarlar/is-ve-istirahet-gunlerinin-yerlerinin-deyisdirilme-7576
-        - https://nk.gov.az/az/senedler/qerarlar/is-ve-istirahet-gunlerinin-yerlerinin-deyisdirilme-7843
-        - https://nk.gov.az/az/senedler/qerarlar/is-ve-istirahet-gunlerinin-yerlerinin-deyisdirilme-8332
-        - https://nk.gov.az/az/senedler/qerarlar/is-ve-istirahet-gunlerinin-yerlerinin-deyisdirilme-8449
+        * <https://nk.gov.az/az/senedler/qerarlar/is-va-istirahat-gunlarinin-yerlarinin-dayisdirilmasi-haqqinda-5423>
+        * <https://nk.gov.az/az/senedler/qerarlar/is-va-istirahat-gunlarinin-yerlarinin--dayisdirilmasi-haqqinda-5982>
+        * <https://nk.gov.az/az/senedler/qerarlar/is-va-istirahat-gunlarinin-yerlarinin-dayisdirilmasi-haqqinda-6488>
+        * <https://nk.gov.az/az/senedler/qerarlar/is-ve-istirahet-gunlerinin-yerlerinin-deyisdirilme-7047>
+        * <https://nk.gov.az/az/senedler/qerarlar/is-ve-istirahet-gunlerinin-yerlerinin-deyisdirilme-7466>
+        * <https://nk.gov.az/az/senedler/qerarlar/is-ve-istirahet-gunlerinin-yerlerinin-deyisdirilme-7576>
+        * <https://nk.gov.az/az/senedler/qerarlar/is-ve-istirahet-gunlerinin-yerlerinin-deyisdirilme-7843>
+        * <https://nk.gov.az/az/senedler/qerarlar/is-ve-istirahet-gunlerinin-yerlerinin-deyisdirilme-8332>
+        * <https://nk.gov.az/az/senedler/qerarlar/is-ve-istirahet-gunlerinin-yerlerinin-deyisdirilme-8449>
+        * <https://nk.gov.az/az/senedler/qerarlar/is-ve-istirahet-gunlerinin-yerlerinin-deyisdirilme-8623>
+
     Special holidays references:
-        - https://www.msk.gov.az/en/elections/pages/municipal-elections/belediyye-29-01-2025
+        * <https://www.msk.gov.az/en/elections/pages/municipal-elections/belediyye-29-01-2025>
     """
 
     eid_al_adha = tr("Qurban bayrami")
+
+    eid_al_fitr = tr("Ramazan bayrami")
+
+    womens_day = tr("Qadınlar günü")
+
     # Substituted date format.
     substituted_date_format = tr("%d.%m.%Y")
     # Day off (substituted from %s).
@@ -323,5 +346,9 @@ class AzerbaijanStaticHolidays:
 
     special_public_holidays_observed = {
         2007: (JAN, 3, eid_al_adha),
+        2025: (
+            (MAR, 27, womens_day),
+            (MAR, 28, eid_al_fitr),
+        ),
         2072: (JAN, 5, eid_al_adha),
     }

@@ -4,7 +4,7 @@
 #  specific sets of holidays on the fly. It aims to make determining whether a
 #  specific date is a holiday as fast and flexible as possible.
 #
-#  Authors: Vacanza Team and individual contributors (see AUTHORS file)
+#  Authors: Vacanza Team and individual contributors (see AUTHORS.md file)
 #           dr-prodigy <dr.prodigy.github@gmail.com> (c) 2017-2023
 #           ryanss <ryanssdev@icloud.com> (c) 2014-2017
 #  Website: https://github.com/vacanza/holidays
@@ -316,8 +316,8 @@ class TestCuba(CommonCountryTests, TestCase):
             ("2022-01-01", "Liberation Day"),
             ("2022-01-02", "Victory Day"),
             ("2022-04-15", "Good Friday"),
-            ("2022-05-01", "International Worker's Day"),
-            ("2022-05-02", "International Worker's Day (observed)"),
+            ("2022-05-01", "International Workers' Day"),
+            ("2022-05-02", "International Workers' Day (observed)"),
             ("2022-07-25", "Commemoration of the Assault of the Moncada garrison"),
             ("2022-07-26", "Day of the National Rebellion"),
             ("2022-07-27", "Commemoration of the Assault of the Moncada garrison"),

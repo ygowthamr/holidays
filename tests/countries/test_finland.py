@@ -4,7 +4,7 @@
 #  specific sets of holidays on the fly. It aims to make determining whether a
 #  specific date is a holiday as fast and flexible as possible.
 #
-#  Authors: Vacanza Team and individual contributors (see AUTHORS file)
+#  Authors: Vacanza Team and individual contributors (see AUTHORS.md file)
 #           dr-prodigy <dr.prodigy.github@gmail.com> (c) 2017-2023
 #           ryanss <ryanssdev@icloud.com> (c) 2014-2017
 #  Website: https://github.com/vacanza/holidays
@@ -408,7 +408,7 @@ class TestFinland(CommonCountryTests, TestCase):
             ("2022-04-18", "Easter Monday"),
             ("2022-04-27", "National War Veterans' Day"),
             ("2022-05-01", "May Day"),
-            ("2022-05-08", "Mothers' Day"),
+            ("2022-05-08", "Mother's Day"),
             ("2022-05-09", "Europe Day"),
             ("2022-05-12", "J. V. Snellman Day, Day of Finnish Heritage"),
             ("2022-05-15", "Remembrance Day"),
@@ -424,7 +424,7 @@ class TestFinland(CommonCountryTests, TestCase):
             ("2022-10-24", "United Nations Day"),
             ("2022-11-05", "All Saints' Day"),
             ("2022-11-06", "Finnish Swedish Heritage Day, svenska dagen"),
-            ("2022-11-13", "Fathers' Day"),
+            ("2022-11-13", "Father's Day"),
             ("2022-11-20", "Day of Children's Rights"),
             ("2022-12-06", "Independence Day"),
             ("2022-12-08", "Jean Sibelius Day, Day of Finnish Music"),

@@ -4,7 +4,7 @@
 #  specific sets of holidays on the fly. It aims to make determining whether a
 #  specific date is a holiday as fast and flexible as possible.
 #
-#  Authors: Vacanza Team and individual contributors (see AUTHORS file)
+#  Authors: Vacanza Team and individual contributors (see AUTHORS.md file)
 #           dr-prodigy <dr.prodigy.github@gmail.com> (c) 2017-2023
 #           ryanss <ryanssdev@icloud.com> (c) 2014-2017
 #  Website: https://github.com/vacanza/holidays
@@ -47,9 +47,9 @@ msgstr "Easter Sunday"
 msgid "Día del Trabajo"
 msgstr "Labor Day"
 
-#. Saint Peter and Saint Paul.
+#. Saint Peter and Saint Paul's Day.
 msgid "San Pedro y San Pablo"
-msgstr "Saint Peter and Saint Paul"
+msgstr "Saint Peter and Saint Paul's Day"
 
 #. Independence Day.
 msgid "Día de la Independencia"
@@ -77,7 +77,7 @@ msgstr "All Saints' Day"
 
 #. Immaculate Conception.
 msgid "Inmaculada Concepción"
-msgstr "Immaculate Conception Day"
+msgstr "Immaculate Conception"
 
 #. Battle of Ayacucho.
 msgid "Batalla de Ayacucho"

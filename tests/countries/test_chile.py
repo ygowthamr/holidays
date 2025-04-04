@@ -4,7 +4,7 @@
 #  specific sets of holidays on the fly. It aims to make determining whether a
 #  specific date is a holiday as fast and flexible as possible.
 #
-#  Authors: Vacanza Team and individual contributors (see AUTHORS file)
+#  Authors: Vacanza Team and individual contributors (see AUTHORS.md file)
 #           dr-prodigy <dr.prodigy.github@gmail.com> (c) 2017-2023
 #           ryanss <ryanssdev@icloud.com> (c) 2014-2017
 #  Website: https://github.com/vacanza/holidays
@@ -405,7 +405,7 @@ class TestChile(CommonCountryTests, TestCase):
             ("2022-05-21", "Navy Day"),
             ("2022-06-07", "Assault and Capture of Cape Arica"),
             ("2022-06-21", "National Day of Indigenous Peoples"),
-            ("2022-06-27", "Saint Peter and Saint Paul"),
+            ("2022-06-27", "Saint Peter and Saint Paul's Day"),
             ("2022-07-16", "Our Lady of Mount Carmel"),
             ("2022-08-15", "Assumption Day"),
             ("2022-08-20", "Nativity of Bernardo O'Higgins (Chillán and Chillán Viejo communes)"),

@@ -4,7 +4,7 @@
 #  specific sets of holidays on the fly. It aims to make determining whether a
 #  specific date is a holiday as fast and flexible as possible.
 #
-#  Authors: Vacanza Team and individual contributors (see AUTHORS file)
+#  Authors: Vacanza Team and individual contributors (see AUTHORS.md file)
 #           dr-prodigy <dr.prodigy.github@gmail.com> (c) 2017-2023
 #           ryanss <ryanssdev@icloud.com> (c) 2014-2017
 #  Website: https://github.com/vacanza/holidays
@@ -18,11 +18,12 @@ from holidays.holiday_base import HolidayBase
 
 
 class Haiti(HolidayBase, ChristianHolidays, InternationalHolidays):
-    """
+    """Haiti holidays.
+
     References:
-      - https://www.wipo.int/wipolex/en/legislation/details/7837
-      - https://haitiwonderland.com/haiti/histoire/jours-feries-en-haiti/27
-      - https://www.haiti-reference.info/pages/plan/generalites/calendrier-dhaiti/
+        * <https://www.wipo.int/wipolex/en/legislation/details/7837>
+        * <https://haitiwonderland.com/haiti/histoire/jours-feries-en-haiti/27>
+        * <https://www.haiti-reference.info/pages/plan/generalites/calendrier-dhaiti/>
     """
 
     country = "HT"
@@ -76,13 +77,13 @@ class Haiti(HolidayBase, ChristianHolidays, InternationalHolidays):
         # Good Friday.
         self._add_good_friday(tr("Vendredi Saint"))
 
-        # Easter.
+        # Easter Sunday.
         self._add_easter_sunday(tr("Pâques"))
 
         # Corpus Christi.
         self._add_corpus_christi_day(tr("Fête-Dieu"))
 
-        # Assumption of Mary.
+        # Assumption Day.
         self._add_assumption_of_mary_day(tr("Assomption de Marie"))
 
         # Death of Dessalines.
@@ -110,7 +111,7 @@ class Haiti(HolidayBase, ChristianHolidays, InternationalHolidays):
         # Feast of Lady of Perpetual Help, Patroness of Haiti.
         self._add_holiday_jun_27(tr("Fête de Notre-Dame du Perpétuel Secours, patronne d'Haiti"))
 
-        # Ascension.
+        # Ascension Day.
         self._add_ascension_thursday(tr("Ascension"))
 
         # Birth Anniversary of Jean-Jacques Dessalines.

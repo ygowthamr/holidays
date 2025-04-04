@@ -4,7 +4,7 @@
 #  specific sets of holidays on the fly. It aims to make determining whether a
 #  specific date is a holiday as fast and flexible as possible.
 #
-#  Authors: Vacanza Team and individual contributors (see AUTHORS file)
+#  Authors: Vacanza Team and individual contributors (see AUTHORS.md file)
 #           dr-prodigy <dr.prodigy.github@gmail.com> (c) 2017-2023
 #           ryanss <ryanssdev@icloud.com> (c) 2014-2017
 #  Website: https://github.com/vacanza/holidays
@@ -697,7 +697,7 @@ class TestSwitzerland(CommonCountryTests, TestCase):
         self.assertLocalizedHolidays(
             "en_US",
             ("2023-01-01", "New Year's Day"),
-            ("2023-01-02", "Berchtold's Day"),
+            ("2023-01-02", "Saint Berchtold's Day"),
             ("2023-01-06", "Epiphany"),
             ("2023-03-01", "Republic Day"),
             ("2023-03-19", "Saint Joseph's Day"),

@@ -4,7 +4,7 @@
 #  specific sets of holidays on the fly. It aims to make determining whether a
 #  specific date is a holiday as fast and flexible as possible.
 #
-#  Authors: Vacanza Team and individual contributors (see AUTHORS file)
+#  Authors: Vacanza Team and individual contributors (see AUTHORS.md file)
 #           dr-prodigy <dr.prodigy.github@gmail.com> (c) 2017-2023
 #           ryanss <ryanssdev@icloud.com> (c) 2014-2017
 #  Website: https://github.com/vacanza/holidays
@@ -96,7 +96,7 @@ class TestDenmark(CommonCountryTests, TestCase):
             ("2022-04-15", "Good Friday"),
             ("2022-04-17", "Easter Sunday"),
             ("2022-04-18", "Easter Monday"),
-            ("2022-05-01", "International Workers' Day"),
+            ("2022-05-01", "Workers' Day"),
             ("2022-05-13", "Great Prayer Day"),
             ("2022-05-26", "Ascension Day"),
             ("2022-06-05", "Constitution Day; Whit Sunday"),
@@ -115,7 +115,7 @@ class TestDenmark(CommonCountryTests, TestCase):
             ("2022-04-15", "Страсна пʼятниця"),
             ("2022-04-17", "Великдень"),
             ("2022-04-18", "Великодній понеділок"),
-            ("2022-05-01", "День праці"),
+            ("2022-05-01", "День трудящих"),
             ("2022-05-13", "День загальної молитви"),
             ("2022-05-26", "Вознесіння Господнє"),
             ("2022-06-05", "День Конституції; Трійця"),

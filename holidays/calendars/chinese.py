@@ -4,7 +4,7 @@
 #  specific sets of holidays on the fly. It aims to make determining whether a
 #  specific date is a holiday as fast and flexible as possible.
 #
-#  Authors: Vacanza Team and individual contributors (see AUTHORS file)
+#  Authors: Vacanza Team and individual contributors (see AUTHORS.md file)
 #           dr-prodigy <dr.prodigy.github@gmail.com> (c) 2017-2023
 #           ryanss <ryanssdev@icloud.com> (c) 2014-2017
 #  Website: https://github.com/vacanza/holidays
@@ -150,7 +150,7 @@ class _ChineseLunisolar:
         2022: (MAY, 8),
         2023: (MAY, 26),
         2024: (MAY, 15),
-        2025: (MAY, 4),
+        2025: (MAY, 5),
         2026: (MAY, 24),
         2027: (MAY, 13),
         2028: (MAY, 2),
